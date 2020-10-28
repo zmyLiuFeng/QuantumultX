@@ -1,5 +1,5 @@
 const cookieName = 'qidian'
-const cookieKey = 'chavy_cookie_acfun'
+const cookieKey = 'chavy_cookie_qidian'
 const chavy = init()
 const cookieVal = $request.headers['Cookie']
 if (cookieVal) {
