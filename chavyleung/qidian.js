@@ -1,17 +1,11 @@
 const cookieName = 'qidian'
 const cookieKey = 'chavy_cookie_acfun'
-const tokenKey = 'chavy_token_acfun'
 const chavy = init()
 const cookieVal = $request.headers['Cookie']
-const tokenVal = $request.headers['access_token']
 if (cookieVal) {
   if (chavy.setdata(cookieVal, cookieKey)) {
     chavy.msg(`${cookieName}`, '获取Cookie: 成功', '')
     chavy.log(`[${cookieName}] 获取Cookie: 成功, cookie: ${cookieVal}`)
-  }
-  if (chavy.setdata(tokenVal, tokenKey)) {
-    chavy.msg(`${cookieName}`, '获取Token: 成功', '')
-    chavy.log(`[${cookieName}] 获取Token: 成功, token: ${tokenVal}`)
   }
 }
 
